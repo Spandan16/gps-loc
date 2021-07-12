@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<title>GPS Location</title>
+	<script>
+	window.addEventListener("load",function(){
+		let succeed = function(pos){
+			alert(pos.coords);
+			alert(pos.coords.longiture);
+			alart(pos.coords.latitude);
+		};
+
+		let failure = function(err){
+			alart(err);
+		};
+
+		let options = {
+			enableHighAccuracy: true,
+			timeout: 5000,
+			maximumAge: 0
+		};
+
+		navigator.geolocation.getCurrentPosition(succeed, failure, options);
+	});
+	</script>
+	</head>
+	<body>
+
+	</body>
+</html>
